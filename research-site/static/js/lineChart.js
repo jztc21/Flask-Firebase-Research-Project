@@ -3,7 +3,7 @@
 */
 
 async function getData() {
-    const response = await fetch("./data/RPr.csv");
+    const response = await fetch("static/data/RPr.csv");
     const data = await response.text(); // CSV is in TEXT format
     //console.log(data);
   
@@ -74,7 +74,7 @@ async function createChart(){
             ]
         },
            options:{
-            maintainAspectRatio: false,
+            maintainAspectRatio: true,
             responsive: true, //resize based on screen size
             scales: {
                 x:{

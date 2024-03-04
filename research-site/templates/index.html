@@ -9,7 +9,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="stylesSE.css">
+    <link rel="stylesheet" href="{{url_for('static', filename='stylesSE.css')}}">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"
         defer></script>
@@ -19,8 +19,8 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark nb-background-color" style="background-color: rgb(16, 54, 0);">
         <div class="container">
-            <a href="index.html" class="navbar-brand">
-                <img src="img/leaf.jpg" height="40px" alt="plant image"
+            <a href="{{url_for('index')}}" class="navbar-brand">
+                <img src="{{url_for('static', filename='/img/leaf.jpg')}}" height="40px" alt="plant image"
                     class="d-inline-block align-text-top w-40 rounded-circle border-radius-50% border border-success border border-2">
                 Bio Research Project
             </a>
@@ -31,16 +31,16 @@
             <div class="collapse navbar-collapse" id="navmenu">
                 <ul class="navbar-nav ms-auto">
                     <li class="navitem">
-                        <a href="index.html" class="nav-link hover-underline-animation nbMenuItem">Home</a>
+                        <a href="{{url_for('index')}}" class="nav-link hover-underline-animation nbMenuItem">Home</a>
                     </li>
                     <li class="navitem">
-                        <a href="authors.html" class="nav-link hover-underline-animation nbMenuItem">Authors</a>
+                        <a href="{{url_for('authors')}}" class="nav-link hover-underline-animation nbMenuItem">Authors</a>
                     </li>
                     <li class="navitem">
-                        <a href="procedure.html" class="nav-link hover-underline-animation nbMenuItem">Procedures</a>
+                        <a href="{{url_for('procedure')}}" class="nav-link hover-underline-animation nbMenuItem">Procedures</a>
                     </li>
                     <li class="navitem">
-                        <a href="result.html" class="nav-link hover-underline-animation nbMenuItem">Result</a>
+                        <a href="{{url_for('result')}}" class="nav-link hover-underline-animation nbMenuItem">Result</a>
                     </li>
                 </ul>
             </div>
@@ -51,7 +51,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-6 p0 d-flex align-items-center">
-                    <img src="img/Foxysporum.jpg" alt="F.Oxysporum" class="img-fluid">
+                    <img src="{{url_for('static', filename='/img/Foxysporum.jpg')}}" alt="F.Oxysporum" class="img-fluid">
                 </div>
                 <div class="col-sm-6 p0 d-flex align-items-center">
                     <div class="container">
@@ -70,7 +70,7 @@
         <div class="conatiner" style="background-color:lightgreen">
             <div class="row">
                 <div class="col-sm-4 p-5">
-                    <img src="img/PetriDish.png" alt="Petri Dish" class="img-fluid rounded">
+                    <img src="{{url_for('static', filename='/img/PetriDish.png')}}" alt="Petri Dish" class="img-fluid rounded">
 
                 </div>
                 <div class="col-sm-8 p-3 ">
@@ -92,7 +92,7 @@
 
             <div class="row">
                 <div class="col-sm-4 p-3 ">
-                    <img src="img/Wilt.jpg" alt="Instance of Fusarium Wilt" class="img-fluid rounded">
+                    <img src="{{url_for('static', filename='/img/Wilt.jpg')}}" alt="Instance of Fusarium Wilt" class="img-fluid rounded">
 
                 </div>
                 <div class="col-sm-8 p-3 ">
@@ -113,7 +113,7 @@
 
             <div class="row">
                 <div class="col-sm-4 p-3 ">
-                    <img src="img/Chart Example.png" alt="Chart Example" class="img-fluid rounded">
+                    <img src="{{url_for('static', filename='/img/Chart Example.png')}}" alt="Chart Example" class="img-fluid rounded">
 
                 </div>
                 <div class="col-sm-8 p-3 ">
@@ -139,7 +139,7 @@
     <footer class="p-5, footer text-light text-center position-relative">
         <div class="container">
             <p class="lead">Copyright &copy: SE 2023 Bootstrap Demo</p>
-            <a href="index.html" class="position-absolute bottom-0 end-0 p-5">
+            <a href="{{url_for('index')}}" class="position-absolute bottom-0 end-0 p-5">
                 <i class="bi bi-arrow-up-circle h2 icon-white"></i>
             </a>
         </div>

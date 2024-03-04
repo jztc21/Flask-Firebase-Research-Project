@@ -7,7 +7,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" 
     integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css" rel="stylesheet">
-    <link rel="stylesheet" href = "stylesSE.css">
+    <link rel="stylesheet" href = "{{url_for('static', filename='stylesSE.css')}}">
 
     <script src="https://c  dn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" 
     integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
@@ -16,8 +16,8 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark nb-background-color" style="background-color: rgb(17, 54, 0);">
         <div class="container">
-            <a href="index.html" class="navbar-brand">
-                <img src="img/leaf.jpg" height= "40px" alt="plant image" class="d-inline-block align-text-top w-40 rounded-circle border-radius-50% border border-success border border-2">
+            <a href="{{url_for('index')}}" class="navbar-brand">
+                <img src="{{url_for('static', filename='/img/leaf.jpg')}}" height= "40px" alt="plant image" class="d-inline-block align-text-top w-40 rounded-circle border-radius-50% border border-success border border-2">
                 Bio Research Project
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
@@ -26,16 +26,16 @@
             <div class="collapse navbar-collapse" id="navmenu">
                 <ul class="navbar-nav ms-auto">
                     <li class="navitem">
-                        <a href="index.html" class="nav-link hover-underline-animation nbMenuItem">Home</a>
+                        <a href="{{url_for('index')}}" class="nav-link hover-underline-animation nbMenuItem">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a href="authors.html" class="nav-link hover-underline-animation nbMenuItem">Authors</a>
+                        <a href="{{url_for('authors')}}" class="nav-link hover-underline-animation nbMenuItem">Authors</a>
                     </li>
                     <li class="nav-item">
-                        <a href="procedure.html" class="nav-link hover-underline-animation nbMenuItem">Procedure</a>
+                        <a href="{{url_for('procedure')}}" class="nav-link hover-underline-animation nbMenuItem">Procedure</a>
                     </li>
                     <li class="nav-item">
-                        <a href="result.html" class="nav-link hover-underline-animation nbMenuItem">Result</a>
+                        <a href="{{url_for('result')}}" class="nav-link hover-underline-animation nbMenuItem">Result</a>
 
                 </li>
             </ul>
@@ -70,7 +70,7 @@
 
                         </p> </td>
                         <td class="text-center">
-                            <img src="img/Materials.png" alt="Materials" width="400px" height="300px" class="rounded"></td> </tr>
+                            <img src="{{url_for('static', filename='/img/Materials.png')}}" alt="Materials" width="400px" height="300px" class="rounded"></td> </tr>
 
 
                             <tr>
@@ -86,7 +86,7 @@
                                         <li>Seal the agar plate using tape</li>
                                     </ol> </p> </td>
                                 <td class="text-center">
-                                    <img src="img/Preparedplate.png" width="400px" height="300px" alt="Prepared plate"></td> </tr>
+                                    <img src="{{url_for('static', filename='/img/Preparedplate.png')}}" width="400px" height="300px" alt="Prepared plate"></td> </tr>
 
                                     <tr>
                                         <th scope="row">
@@ -104,7 +104,7 @@
 
                                         </p> </td>
                                         <td class="text-center">
-                                            <img src="img/ImageJpic.png" alt="ImageJ picture"></td> </tr>
+                                            <img src="{{url_for('static', filename='/img/ImageJpic.png')}}" alt="ImageJ picture"></td> </tr>
 
 
 
